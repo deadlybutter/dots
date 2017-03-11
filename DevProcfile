@@ -1,0 +1,2 @@
+web: nodemon --ignore 'app/*' --ignore 'public/*' app.js
+mongo: mongod
