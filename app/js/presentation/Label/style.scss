@@ -1,0 +1,13 @@
+@import '../../../palette';
+
+.label {
+  color: $white;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: lowercase;
+  display: inline-block;
+  padding: 4px 34px;
+  margin: 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}

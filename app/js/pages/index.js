@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from '../presentation/Header';
 
 import './style.scss';
 
@@ -6,7 +7,12 @@ class Page extends Component {
   render() {
     return (
       <article className="page">
-        { this.props.children }
+        <Header />
+        <div className="row">
+          <div className="col-xs-12">
+            { this.props.children }
+          </div>
+        </div>
       </article>
     );
   }

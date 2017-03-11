@@ -1,38 +1,32 @@
 import React, { Component } from 'react';
+import { convertObjectToArray } from '../../helpers'
 
-import DataSet from '../../components/DataSet';
-import Sidebar from '../../presentation/Sidebar';
-import Table from '../../components/Table';
+import JumboTitle from '../../presentation/JumboTitle';
+import Navigator from '../../presentation/Navigator';
+import Label from '../../presentation/Label';
+import Feed from '../../presentation/Feed';
+import Dot from '../../presentation/Dot';
 
 import './style.scss';
 
-class Project extends Component {
-  constructor(props) {
-    super(props);
+function mapCategories(categories) {
+  return convertObjectToArray(categories).map((category, index) =>
+    <Label key={index} title={category.title} background={category.background} />);
+}
 
-    this.state = {
-      data: null,
-    };
-  }
+function mapDots(dots) {
+  return convertObjectToArray(dots).map((dot, index) =>
+    <Dot key={index} data={dot} mapCategories={mapCategories} />);
+}
 
-  componentDidMount() {
-    fetch('/api/v1/data/astronomy')
-    .then(res => res.json())
-    .then(data => {
-      this.setState({ data });
-    });
-  }
-
-  render() {
-    return (
-      <section className="page__project">
-        <DataSet data={this.state.data}>
-          <Sidebar />
-          <Table />
-        </DataSet>
-      </section>
-    );
-  }
+const Project = ({ graph }) => {
+  return (
+    <section className="page__project">
+      <JumboTitle title={graph.meta.title} subtitle={graph.meta.subtitle} />
+      <Navigator categories={mapCategories(graph.categories)} />
+      <Feed dots={mapDots(graph.dots)} />
+    </section>
+  );
 }
 
 module.exports = Project;

@@ -2,11 +2,11 @@ import React from 'react';
 
 import './style.scss';
 
-const Label = (props) => {
+const Label = ({ background, title }) => {
   return (
-    <div className='label' style={{background: props.background}}>
-      <p>{props.title}</p>
-    </div>
+    <span className='label' style={{ background: background }}>
+      { title }
+    </span>
   );
 };
 

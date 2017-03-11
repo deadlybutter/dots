@@ -4,17 +4,17 @@ import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
 
 import 'whatwg-fetch';
 
-import './reset.scss';
+import './main.scss';
 
 import Page from './js/pages';
 import Home from './js/pages/Home';
-import Project from './js/pages/Project';
+import ProjectContainer from './js/containers/ProjectContainer';
 
 render((
   <Router history={browserHistory}>
     <Route path="/" component={Page}>
       <IndexRoute component={Home} />
-      <Route path="/project" component={Project} />
+      <Route path="/project" component={ProjectContainer} />
     </Route>
   </Router>
 ), document.getElementById('root'));

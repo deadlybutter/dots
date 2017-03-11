@@ -1,0 +1,38 @@
+@import '../../../palette';
+
+.header {
+  color: $color1;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  font-size: 26px;
+
+  $dotSize: 8px;
+
+  span {
+    display: inline-block;
+    padding: $dotSize / 2 $dotSize;
+    position: relative;
+
+    &:before {
+      content: '';
+      width: $dotSize;
+      height: $dotSize;
+      position: absolute;
+      top: $dotSize * 2;
+      left: -$dotSize / 2;
+      background: $color1;
+      border-radius: $dotSize;
+    }
+
+    &:after {
+      content: '';
+      width: $dotSize;
+      height: $dotSize;
+      position: absolute;
+      top: $dotSize * 2;
+      right: -$dotSize / 2;
+      background: $color1;
+      border-radius: $dotSize;
+    }
+  }
+}

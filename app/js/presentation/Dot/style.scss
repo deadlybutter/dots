@@ -1,0 +1,67 @@
+@import '../../../palette';
+@import '../Note/style';
+
+.dot {
+  font-family: 'Open Sans', sans-serif;
+  margin: 8%;
+  text-align: left;
+
+  h1, h2 {
+    font-family: 'Roboto Slab', serif;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .dot__date {
+    padding: 0;
+    margin-top: 2px;
+
+    p {
+      text-align: center;
+      color: $color3;
+      font-size: 14px;
+      text-align: right;
+      margin-right: 2px;
+    }
+  }
+
+  .dot__content p {
+    margin-top: 8px;
+  }
+
+  .dot__connections {
+    margin-top: 2%;
+
+    .dot__connection {
+      display: inline-block;
+      margin-right: 16px;
+      margin-top: 16px;
+      padding-left: 8px;
+
+      p {
+        margin-top: 4px;
+      }
+    }
+  }
+
+  .dot__sources {
+    a {
+      text-decoration: none;
+      color: $color4;
+      padding: 4px 0;
+      font-size: 12px;
+      font-family: 'Open Sans', sans-serif;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+}
