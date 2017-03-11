@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../presentation/Header';
+import Footer from '../presentation/Footer';
 
 import './style.scss';
 
@@ -13,6 +14,7 @@ class Page extends Component {
             { this.props.children }
           </div>
         </div>
+        <Footer />
       </article>
     );
   }

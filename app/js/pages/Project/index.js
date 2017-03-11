@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { convertObjectToArray } from '../../helpers'
+import { convertObjectToArray, getMachineName } from '../../helpers'
 
 import JumboTitle from '../../presentation/JumboTitle';
 import Navigator from '../../presentation/Navigator';
@@ -9,24 +9,70 @@ import Dot from '../../presentation/Dot';
 
 import './style.scss';
 
-function mapCategories(categories) {
+function mapCategories(categories, onClick = null, filters = []) {
   return convertObjectToArray(categories).map((category, index) =>
-    <Label key={index} title={category.title} background={category.background} />);
+    <Label
+      key={index}
+      title={category.title}
+      background={category.background}
+      onClick={onClick}
+      highlighted={filters.indexOf(getMachineName(category.title)) > -1} />);
 }
 
-function mapDots(dots) {
-  return convertObjectToArray(dots).map((dot, index) =>
-    <Dot key={index} data={dot} mapCategories={mapCategories} />);
-}
+class Project extends Component {
+  constructor(props) {
+    super(props);
 
-const Project = ({ graph }) => {
-  return (
-    <section className="page__project">
-      <JumboTitle title={graph.meta.title} subtitle={graph.meta.subtitle} />
-      <Navigator categories={mapCategories(graph.categories)} />
-      <Feed dots={mapDots(graph.dots)} />
-    </section>
-  );
+    this.onFilter = this.onFilter.bind(this);
+
+    this.state = {
+      filters: [],
+    }
+  }
+
+  getFeedDots() {
+    let arr = convertObjectToArray(this.props.graph.dots);
+
+    if (this.state.filters.length > 0) {
+      arr = arr.filter((dot) => {
+        const categories = [];
+        dot.nodes.forEach((node) =>
+          node.categories.forEach((category) =>
+            categories.push(getMachineName(category.title))));
+
+        return categories.some((category) => this.state.filters.indexOf(category) > -1);
+      });
+    }
+
+    return arr.sort((a, b) => a._date > b._date)
+      .map((dot, index) =>
+        <Dot key={index} data={dot} mapCategories={mapCategories} />);
+  }
+
+  onFilter(filter) {
+    const filters = this.state.filters;
+    const index = filters.indexOf(filter);
+
+    index > -1 ? filters.splice(index, 1) : filters.push(filter);
+
+    this.setState({
+      filters,
+    });
+  }
+
+  render() {
+    const graph = this.props.graph;
+    const categories = mapCategories(graph.categories, this.onFilter, this.state.filters);
+    const dots = this.getFeedDots();
+
+    return (
+      <section className="page__project">
+        <JumboTitle title={graph.meta.title} subtitle={graph.meta.subtitle} />
+        <Navigator categories={categories} />
+        <Feed dots={dots} />
+      </section>
+    );
+  }
 }
 
 module.exports = Project;

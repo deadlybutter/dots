@@ -1,0 +1,22 @@
+@import '../../../palette';
+
+.footer {
+  float: right;
+  padding: 8px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: $color3;
+
+  p {
+    margin-right: 64px;
+  }
+
+  a {
+    text-decoration: underline;
+    color: $color2;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

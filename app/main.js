@@ -12,9 +12,9 @@ import ProjectContainer from './js/containers/ProjectContainer';
 
 render((
   <Router history={browserHistory}>
-    <Route path="/" component={Page}>
-      <IndexRoute component={Home} />
-      <Route path="/project" component={ProjectContainer} />
+    <Route component={Page}>
+      <Route path="/" component={Home} />
+      <Route path="/projects/:project" component={ProjectContainer} />
     </Route>
   </Router>
 ), document.getElementById('root'));

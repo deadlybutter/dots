@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import Note from '../Note';
+import { getMachineName } from '../../helpers';
 
 import './style.scss';
 
 const Dot = ({ data, mapCategories }) => {
+  const machineName = getMachineName(data.title);
+
   return (
     <div className='row dot'>
       <div className="col-xs-2 dot__date">
@@ -11,7 +14,7 @@ const Dot = ({ data, mapCategories }) => {
         <p>{ data._date.getFullYear() }</p>
       </div>
       <div className="col-xs-10 dot__content">
-        <h1>{ data.title }</h1>
+        <a href={`#${machineName}`}><h1 id={machineName}>{ data.title }</h1></a>
         <p>{ data.description }</p>
       </div>
       <div className="col-xs-offset-2 col-xs-10 dot__connections">

@@ -13,7 +13,7 @@ class ProjectContainer extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/v1/data/test')
+    fetch(`/api/v1/data/${this.props.params.project}`)
     .then(res => res.json())
     .then(data => {
       this.setState({ data });

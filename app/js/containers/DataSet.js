@@ -1,8 +1,5 @@
 import React from 'react';
-
-function getMachineName(title) {
-  return title.toLowerCase().trim().replace(/ /g,"_");
-}
+import { getMachineName } from '../helpers';
 
 const DataSet = (props) => {
   if (!props.data) return null;
@@ -37,7 +34,7 @@ const DataSet = (props) => {
       _date: new Date(dot.date),
     };
   });
-  
+
   const children = React.Children.map(props.children,
     (child) => React.cloneElement(child, {
       graph,

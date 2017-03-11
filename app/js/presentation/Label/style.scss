@@ -7,7 +7,12 @@
   text-transform: lowercase;
   display: inline-block;
   padding: 4px 34px;
-  margin: 8px;
+  margin: 8px 0;
+  margin-right: 8px;
   border-radius: 4px;
   font-weight: bold;
+
+  &.-highlighted {
+    border: 2px solid $color2;
+  }
 }
