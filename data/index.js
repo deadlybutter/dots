@@ -1,4 +1,4 @@
 module.exports = {
-  astronomy: require('./astronomy'),
+  'trump-russia': require('./trump-russia'),
   test: require('./test'),
 }
