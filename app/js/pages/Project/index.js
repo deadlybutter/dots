@@ -9,25 +9,26 @@ import Dot from '../../presentation/Dot';
 
 import './style.scss';
 
-function mapCategories(categories, onClick = null, filters = []) {
-  return convertObjectToArray(categories).map((category, index) =>
-    <Label
-      key={index}
-      title={category.title}
-      background={category.background}
-      onClick={onClick}
-      highlighted={filters.indexOf(getMachineName(category.title)) > -1} />);
-}
-
 class Project extends Component {
   constructor(props) {
     super(props);
 
     this.onFilter = this.onFilter.bind(this);
+    this.mapCategories = this.mapCategories.bind(this);
 
     this.state = {
       filters: [],
     }
+  }
+
+  mapCategories(categories, onClick = null) {
+    return convertObjectToArray(categories).map((category, index) =>
+      <Label
+        key={index}
+        title={category.title}
+        background={category.background}
+        onClick={onClick}
+        highlighted={this.state.filters.indexOf(getMachineName(category.title)) > -1} />);
   }
 
   getFeedDots() {
@@ -46,7 +47,7 @@ class Project extends Component {
 
     return arr.sort((a, b) => a._date > b._date)
       .map((dot, index) =>
-        <Dot key={index} data={dot} mapCategories={mapCategories} />);
+        <Dot key={index} data={dot} mapCategories={this.mapCategories} />);
   }
 
   onFilter(filter) {
@@ -62,7 +63,7 @@ class Project extends Component {
 
   render() {
     const graph = this.props.graph;
-    const categories = mapCategories(graph.categories, this.onFilter, this.state.filters);
+    const categories = this.mapCategories(graph.categories, this.onFilter);
     const dots = this.getFeedDots();
 
     return (

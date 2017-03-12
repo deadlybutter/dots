@@ -28,6 +28,10 @@ module.exports = {
       title: 'Opposition Bloc',
       background: '#DDDDDD',
     },
+    {
+      title: 'Russian Oligarch',
+      background: '#001f3f',
+    }
   ],
   nodes: [
     {
@@ -38,7 +42,7 @@ module.exports = {
     {
       title: 'Dmytro Firtash',
       description: 'Exiled Ukrainian oligarch',
-      categories: ['Team Putin'],
+      categories: ['Team Putin', 'Ukrainian Oligarch'],
     },
     {
       title: 'Semion Mogilevich',
@@ -48,7 +52,7 @@ module.exports = {
     {
       title: 'Oleg Deripaska',
       description: `Founder and owner of one of the largest Russian industrial groups Basic Element company, President of En+ Group and United Company RUSAL, the largest aluminium company in the world.`,
-      categories: ['Team Putin', 'Organized Crime'],
+      categories: ['Team Putin', 'Russian Oligarch', 'Organized Crime'],
     },
     {
       title: 'Rinat Akhmetov',

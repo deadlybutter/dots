@@ -5,6 +5,7 @@ import './style.scss';
 
 const Label = ({ background, title, onClick, highlighted }) => {
   const filter = () => {
+    if (!onClick) return;
     onClick(getMachineName(title));
   };
 
