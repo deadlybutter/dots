@@ -45,7 +45,7 @@ class Project extends Component {
       });
     }
 
-    return arr.sort((a, b) => a._date > b._date)
+    return arr.sort((a, b) => a._date - b._date)
       .map((dot, index) =>
         <Dot key={index} data={dot} mapCategories={this.mapCategories} />);
   }
