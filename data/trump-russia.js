@@ -122,7 +122,7 @@ module.exports = {
       categories: ['Organized Crime', 'Team Trump'],
     },
     {
-      title: 'Alexander Mashkevich',
+      title: 'Alexander Mashkevitch',
       description: `Strategic partner to Bayrock and a major shareholder in ENRC, a miner that was delisted from the London Stock Exchange in 2013 amid corruption allegations.`,
       categories: ['Kazakh', 'Organized Crime'],
     },
@@ -155,6 +155,11 @@ module.exports = {
       title: 'Tamir Sapir',
       description: `American businessman and investor from the former Soviet republic of Georgia who made millions bartering fertilizer and oil with the Soviets in the 1980s; he took most of his money and put it into New York real-estate. This profile makes a decent argument he was Russian Intelligence http://washingtonmonthly.com/2017/02/20/trumps-soho-project-the-mob-and-russian-intelligence/`,
       categories: ['Russian Intelligence'],
+    },
+    {
+      title: 'Salvatore Lauria',
+      description: 'Associate of Mr. Sater, who sometimes showed up to work wearing a court-ordered ankle monitor',
+      categories: ['Organized Crime']
     }
   ],
   dots: [
@@ -286,58 +291,58 @@ module.exports = {
       ],
     },
     {
-      title: 'NYT Runs profile on Slater exposing his past',
-      description: `Not long after the Trump SoHo launch, The New York Times runs a story exposing Felix Slater's past crimes.`,
+      title: 'NYT Runs profile on Sater exposing his past',
+      description: `Not long after the Trump SoHo launch, The New York Times runs a story exposing Felix Sater's past crimes.`,
       date: '12/7/2007',
-      nodes: ['Felix Slater'],
+      nodes: ['Felix Sater'],
       sources: ['http://www.nytimes.com/2007/12/17/nyregion/17trump.html'],
     },
     {
-      title: 'Slater leaves Bayrock',
+      title: 'Sater leaves Bayrock',
       description: `"He was involved. No one disputes his involvement at the early stages. But after early 2008 he was no longer affiliated with the company." (Exact date unknown)`,
       date: '1/1/2008',
-      nodes: ['Felix Slater'],
+      nodes: ['Felix Sater'],
       sources: ['http://www.telegraph.co.uk/news/2016/05/26/exclusive-russian-mob-linked-fraudster-a-key-player-in-donald-tr/'],
     },
     {
-      title: 'Slater becomes senior advisor to Donald Trump',
+      title: 'Sater becomes senior advisor to Donald Trump',
       description: `For about a year Sater became a "Senior Advisor to Donald Trump" and was given a Trump Organization e-mail address, business cards and an office there. The phone number listed on his business card previously belonged to a lawyer in Trump's general counsel's office. (Exact date unknown)`,
       date: '1/1/2010',
-      nodes: ['Felix Slater', 'Donald Trump', 'The Trump Organization'],
+      nodes: ['Felix Sater', 'Donald Trump', 'The Trump Organization'],
       sources: ['https://www.forbes.com/sites/richardbehar/2016/10/03/donald-trump-and-the-felon-inside-his-business-dealings-with-a-mob-connected-hustler/#edd5c4a22824'],
     },
     {
       title: 'Lawsuit filed against Bayrock for money laundering is unsealed',
       description: `A Manhattan judge has unsealed a civil tax fraud case brought in behalf of New York State against associates of Donald Trump. The suit accuses convicted racketeer and Felix Sater, Bayrock Group, and prominent law firms of conspiring to launder as much as $250 million dollars of profit on Trump projects Bayrock was co-developing out of the country in a scheme to evade $100 million dollars of state and federal income tax.`,
       date: '7/14/2016',
-      nodes: ['Felix Slater', 'Donald Trump', 'The Trump Organization', 'Bayrock Group LLC', 'Tevfik Arif'],
+      nodes: ['Felix Sater', 'Donald Trump', 'The Trump Organization', 'Bayrock Group LLC', 'Tevfik Arif'],
       sources: [
         'http://www.prnewswire.com/news-releases/ny-attorney-general-green-lights-250-million-tax-fraud-prosecution-of-trump-projects-300298935.html',
-        'https://www.documentcloud.org/documents/3117825-Qui-Tam-Complaint-With-Exhibit-a-and-Attachments.html#document/p1',
+        'https://assets.documentcloud.org/documents/2638421/Kriss-v-Bayrock-Complaint.txt',
       ],
     },
     {
       title: 'Trump signed a consent letter for $50 million deal between Bayrock and FL',
       description: `The deal asked Trump to “indicate your consent to the Transaction as evidenced by the Transaction Documents by counterexecuting and returning to the undersigned a copy of this letter”. The main enclosed document was the loan agreement, which explicitly listed Sater. Mr Trump, Donald Jr and Ivanka were informed of the FL deal in advance and signed letters acknowledging the receipt of the information.`,
       date: '7/16/2007',
-      nodes: ['Felix Slater', 'Donald Trump', 'Ivanka Trump', 'Donald Trump Jr.', 'The Trump Organization', 'Bayrock Group LLC', 'FL Group'],
+      nodes: ['Felix Sater', 'Donald Trump', 'Ivanka Trump', 'Donald Trump Jr.', 'The Trump Organization', 'Bayrock Group LLC', 'FL Group'],
       sources: [
         'https://www.ft.com/content/549ddfaa-5fa5-11e6-b38c-7b39cbb1138a',
         'http://www.telegraph.co.uk/news/2016/05/26/exclusive-russian-mob-linked-fraudster-a-key-player-in-donald-tr/',
       ],
     },
     {
-      title: `Trump gives sworn testimony claiming to not know Slater well`,
+      title: `Trump gives sworn testimony claiming to not know Sater well`,
       description: `Trump has repeatedly said he barely remembers Sater. In sworn testimony in 2013, Trump said he wouldn’t recognize Sater if they were sitting in the same room.`,
       date: '11/5/2013',
-      nodes: ['Donald Trump', 'Felix Slater'],
+      nodes: ['Donald Trump', 'Felix Sater'],
       sources: ['https://www.washingtonpost.com/politics/former-mafia-linked-figure-describes-association-with-trump/2016/05/17/cec6c2c6-16d3-11e6-aa55-670cabef46e0_story.html?utm_term=.aa555999a5ad'],
     },
     {
       title: `Bayrock produces brochure naming the oligarch trio`,
-      description: `One of the listed partners is Alexander Machkevich and the Eurasia Group, which he controls with Chodiev and Ibragimov (the Trio). Exact date Brochure created is unknown, but had to be during the year of 2007 while Trump SoHo is being worked on.`,
+      description: `One of the listed partners is Alexander Mashkevitch and the Eurasia Group, which he controls with Chodiev and Ibragimov (the Trio). Exact date Brochure created is unknown, but had to be during the year of 2007 while Trump SoHo is being worked on.`,
       date: '1/1/2007',
-      nodes: ['Alexander Machkevich', 'Bayrock Group LLC', 'Patokh Chodiev', 'Alijan Ibragimov'],
+      nodes: ['Alexander Mashkevitch', 'Bayrock Group LLC', 'Patokh Chodiev', 'Alijan Ibragimov'],
       sources: ['https://www.forbes.com/sites/richardbehar/2016/10/03/trump-and-the-oligarch-trio/#2b5d6c165314']
     },
   ],
