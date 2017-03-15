@@ -345,5 +345,20 @@ module.exports = {
       nodes: ['Alexander Mashkevitch', 'Bayrock Group LLC', 'Patokh Chodiev', 'Alijan Ibragimov'],
       sources: ['https://www.forbes.com/sites/richardbehar/2016/10/03/trump-and-the-oligarch-trio/#2b5d6c165314']
     },
+    {
+      title: 'Paul Manafort resigns from Trump campaign',
+      description: `“This morning Paul Manafort offered, and I accepted, his resignation from the campaign,” Mr. Trump said in a statement. “I am very appreciative for his great work in helping to get us where we are today.”`,
+      date: '8/19/2016',
+      nodes: ['Paul Manafort', 'Donald Trump'],
+      sources: ['https://www.nytimes.com/2016/08/20/us/politics/paul-manafort-resigns-donald-trump.html'],
+    },
+    {
+      title: 'Paul Manafort leaves Yanukovych campaign',
+      description: `Manafort also worked as an adviser on the Ukrainian presidential campaign of Viktor Yanukovych (and his Party of Regions during the same time span) from December 2004 until the February 2010 Ukrainian presidential election. (Exact date unknown)`,
+      date: '2/1/2010',
+      nodes: ['Paul Manafort', 'Viktor Yanukovych'],
+      sources: ['https://en.wikipedia.org/wiki/Paul_Manafort#Lobbying_for_Viktor_Yanukovych_and_involvements_in_Ukraine'],
+    },
+
   ],
 }
