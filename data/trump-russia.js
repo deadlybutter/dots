@@ -43,6 +43,10 @@ module.exports = {
     {
       title: 'White House Inner Circle',
       background: '#7FDBFF',
+    },
+    {
+      title: 'Russian Billionaire',
+      background: '#B10DC9',
     }
   ],
   nodes: [
@@ -64,7 +68,7 @@ module.exports = {
     {
       title: 'Oleg Deripaska',
       description: `Founder and owner of one of the largest Russian industrial groups Basic Element company, President of En+ Group and United Company RUSAL, the largest aluminium company in the world.`,
-      categories: ['Team Putin', 'Russian Oligarch', 'Organized Crime'],
+      categories: ['Team Putin', 'Russian Oligarch', 'Organized Crime', 'Russian Billionaire'],
     },
     {
       title: 'Rinat Akhmetov',
@@ -148,8 +152,8 @@ module.exports = {
     },
     {
       title: 'FL Group',
-      description: 'Strategic financing partner to Bayrock until it went under',
-      categories: ['Company'],
+      description: 'Icelands largest private investment fund and strategic financing partner to Bayrock until it went under in 2008. The bank was financed by Russian billionaires & oligarchs.',
+      categories: ['Company', 'Organized Crime', 'Russian Billionaire', 'Russian Oligarch'],
     },
     {
       title: 'Tamir Sapir',
@@ -160,7 +164,52 @@ module.exports = {
       title: 'Salvatore Lauria',
       description: 'Associate of Mr. Sater, who sometimes showed up to work wearing a court-ordered ankle monitor',
       categories: ['Organized Crime']
-    }
+    },
+    {
+      title: 'Andrii Artemenko',
+      description: 'Ukrainian politician',
+      categories: ['Team Putin'],
+    },
+    {
+      title: 'Michael Cohen',
+      description: 'Trumps personal lawyer',
+      categories: ['Team Trump', 'White House Inner Circle'],
+    },
+    {
+      title: 'Aras Agalarov',
+      description: 'Founder of Crocus Group, one of the Russias largest real-estate companies & same company that hosted his beauty pageant in Moscow.',
+      categories: ['Team Putin', 'Russian Billionaire'],
+    },
+    {
+      title: 'Vladimir Putin',
+      description: 'President of Russia',
+      categories: ['Team Putin', 'Russian Oligarch'],
+    },
+    {
+      title: 'Herman Gref',
+      description: 'Chief executive officer of state-controlled Sberbank PJSC, Russia’s biggest bank.  Vladimir Putin’s economy minister from 2000 to 2007.',
+      categories: ['Team Putin'],
+    },
+    {
+      title: 'Roustam Tariko',
+      description: 'Russian billionaire, owns Russian Standard Vodka and Russian Standard Bank.',
+      categories: ['Russian Billionaire'],
+    },
+    {
+      title: 'Emin Agalarov',
+      description: 'Singer, son of Aras Agalarov. (Listed as a billionaire because of Dad)',
+      categories: ['Russian Billionaire'],
+    },
+    {
+      title: 'Yuri Shefler',
+      description: 'Founder of a vodka company named Stolichnaya',
+      categories: ['Russian Billionaire'],
+    },
+    {
+      title: 'Alex Shnaider',
+      description: 'Russian-born Israeli-Canadian entrepreneur and former commodities trader. He is co-founder with Eduard Shifrin of the Midland Group. Business associate of Trump.',
+      categories: ['Russian Billionaire'],
+    },
   ],
   dots: [
     {
@@ -181,7 +230,7 @@ module.exports = {
       ]
     },
     {
-      title: 'Russian billionare paid Manafort several million for management fees',
+      title: 'Russian billionaire paid Manafort several million for management fees',
       description: `Companies controlled by another Russian billionaire, Oleg Deripaska, paid $7.35 million toward management fees for Manafort and his partners in connection with an investment fund, Pericles Emerging Markets. The Russian planned to buy a series of assets, including a telecom company called Black Sea Cable, through Pericles. Black Sea Cable, in turn, was controlled by Yanukovych cronies. In 2014, Mr. Deripaska filed a legal action in a Cayman Islands court seeking to recover his investment in Pericles, which is now defunct. (Exact date unknown)`,
       date: '11/1/2008',
       nodes: ['Paul Manafort', 'Oleg Deripaska', 'Viktor Yanukovych'],
@@ -359,6 +408,109 @@ module.exports = {
       nodes: ['Paul Manafort', 'Viktor Yanukovych'],
       sources: ['https://en.wikipedia.org/wiki/Paul_Manafort#Lobbying_for_Viktor_Yanukovych_and_involvements_in_Ukraine'],
     },
-
+    {
+      title: 'Michael Cohen delivers plan to drop Russian sanctions',
+      description: 'Cohen hand-delivered a sealed “peace plan” to the White House outlining a way to remove the U.S. sanctions on Russia. (Exact date unknown)',
+      date: '2/1/2017',
+      nodes: ['Felix Sater', 'Michael Cohen', 'Andrii Artemenko'],
+      sources: ['http://nymag.com/daily/intelligencer/2017/02/trumps-lawyer-involved-with-plan-to-lift-russian-sanctions.html']
+    },
+    {
+      title: 'Trump invites Putin to his Moscow pageant',
+      description: 'Trump tweeted at Putin an invitation to his Moscow pageant. Behind the scenes Agalarov had a 1:1 meeting scheduled which got cancelled last minute. Putin left a "decorative lacquered box, a traditional Russian gift, and a warm note".',
+      date: '6/18/2013',
+      nodes: ['Donald Trump', 'Aras Agalarov', 'Vladimir Putin'],
+      sources: [
+        'https://twitter.com/realDonaldTrump/status/347191326112112640',
+        'https://www.washingtonpost.com/politics/inside-trumps-financial-ties-to-russia-and-his-unusual-flattery-of-vladimir-putin/2016/06/17/dbdcaac8-31a6-11e6-8ff7-7b6c1998b7a0_story.html?utm_term=.63e7a9a85daa'
+      ]
+    },
+    {
+      title: 'Trump has two hour meeting with "all the oligarchs"',
+      description: 'Gref organized the meeting with Agalarov,“Almost all of the oligarchs were in the room,” Trump bragged to Real Estate Weekly upon returning home. (Exact date unknown, near pageant)',
+      date: '6/19/2013',
+      nodes: ['Donald Trump', 'Aras Agalarov', 'Herman Gref'],
+      sources: [
+        'https://www.washingtonpost.com/politics/inside-trumps-financial-ties-to-russia-and-his-unusual-flattery-of-vladimir-putin/2016/06/17/dbdcaac8-31a6-11e6-8ff7-7b6c1998b7a0_story.html?utm_term=.63e7a9a85daa',
+        'https://www.bloomberg.com/news/articles/2016-12-21/the-day-trump-came-to-moscow-oligarchs-miss-universe-and-nobu',
+      ]
+    },
+    {
+      title: 'Herman Gref calls Trump the "president of change"',
+      description: `Russia's Sberbank CEO Herman Gref said that Donald Trump is “the president of change,” whose business experience should be sufficient enough to make right steps as the US leader.`,
+      date: '12/28/2016',
+      nodes: ['Donald Trump', 'Herman Gref'],
+      sources: ['https://sputniknews.com/politics/201612281049052490-gref-calls-trump-chenge-president/'],
+    },
+    {
+      title: 'Tariko met Trump separately during his visit to Moscow',
+      description: `One face conspicuously absent from the Nobu gathering was vodka tycoon Roustam Tariko, the founder of Russian Standard Corp., another Miss Universe sponsor. Tariko said he met Trump separately during his visit to Moscow after first getting to know him in the mid-2000s during business trips to New York. “I’ve known Donald Trump for many years,” Tariko said in a June interview. “I’ve always found it interesting to talk with him.” (Exact date unknown, near pageant)`,
+      date: '6/20/2013',
+      nodes: ['Donald Trump', 'Roustam Tariko'],
+      sources: ['https://www.bloomberg.com/news/articles/2016-12-21/the-day-trump-came-to-moscow-oligarchs-miss-universe-and-nobu']
+    },
+    {
+      title: 'Bizarre music video shot during Donald Trump’s 2013 visit to Moscow',
+      description: 'Trump exercised his drama skills shooting a music video with Emin Agalarov',
+      date: '11/9/2013',
+      nodes: ['Donald Trump', 'Emin Agalarov'],
+      sources: [
+        'http://www.thedailybeast.com/articles/2017/01/20/she-met-donald-trump-at-the-moscow-ritz-not-that-way.html',
+        'https://www.thesun.co.uk/news/2590466/donald-trump-starred-in-bizarre-music-video-at-hotel-mentioned-in-leaked-dossier-during-2013-moscow-trip-as-experts-claim-his-room-would-have-been-bugged/'
+      ]
+    },
+    {
+      title: 'Arif and Eurasia Group members arrested in police raid',
+      description: `As for Arif, his most recent visible brush with the law came in 2010, when he and other members of Bayrock’s Eurasian Trio were arrested together in Turkey during a police raid on a suspected prostitution ring`,
+      date: '9/28/2010',
+      nodes: ['Tevfik Arif', 'Alexander Mashkevitch'],
+      sources: [
+        'http://www.ynetnews.com/articles/0,7340,L-4048812,00.html',
+        'http://www.the-american-interest.com/2016/12/19/the-curious-world-of-donald-trumps-private-russian-connections/',
+      ],
+    },
+    {
+      title: 'Sater, Ivanka and DJT Jr. visit Moscow',
+      description: `During a trip in 2006, Mr. Sater and two of Mr. Trump’s children, Donald Jr. and Ivanka, stayed at the historic Hotel National Moscow opposite the Kremlin, connecting with potential partners over the course of several days. (Exact date unknown)`,
+      date: '1/1/2008',
+      nodes: ['Felix Sater', 'Donald Trump Jr.', 'Ivanka Trump'],
+      sources: ['https://www.nytimes.com/2017/01/16/us/politics/donald-trump-russia-business.html'],
+    },
+    {
+      title: 'Trump claims to have met "high level people" in Moscow',
+      description: `Mr. Trump said of his 2013 trip to Moscow during a September 2015 interview on The Hugh Hewitt Show, “I was with the top-level people, both oligarchs and generals, and top of the government people. I can’t go further than that, but I will tell you that I met the top people, and the relationship was extraordinary.”`,
+      date: '9/21/015',
+      nodes: ['Donald Trump'],
+      sources: ['http://www.hughhewitt.com/donald-trump-returns/']
+    },
+    {
+      title: 'Sater visits Trump Tower during campaign',
+      description: `Sater visited Trump Tower last month for undisclosed business, according to POLITICO. He also donated the maximum allowable contribution to Trump’s presidential campaign. (Exact date unknown)`,
+      date: '7/1/2016',
+      nodes: ['Donald Trump', 'Felix Sater', 'The Trump Organization'],
+      sources: ['http://www.politico.com/story/2016/08/donald-trump-russia-felix-sater-227434'],
+    },
+    {
+      title: 'Suit alledges FL & Bayrock agreed to pursue $2 billion in other trump deals',
+      description: `The Kriss lawsuit further alleges that FL Group (FLG) also agreed to work with Bayrock to facilitate outright tax fraud on more than $250 million of potential earnings. In particular, it alleges that FLG agreed to provide the $50 million in exchange for a 62 percent stake in the four Bayrock Trump projects. As an equity partner in the Trump SoHo, with a significant 18 percent equity stake in this one deal alone, Donald Trump himself had to sign off on the deal.`,
+      date: '5/10/2010',
+      nodes: ['Felix Sater', 'The Trump Organization', 'Bayrock Group LLC', 'FL Group', 'Tevfik Arif'],
+      sources: [
+        'https://assets.documentcloud.org/documents/2638421/Kriss-v-Bayrock-Complaint.pdf',
+        'http://www.the-american-interest.com/2016/12/19/the-curious-world-of-donald-trumps-private-russian-connections/',
+        'http://www.telegraph.co.uk/news/2016/05/25/exclusive-donald-trump-signed-off-deal-designed-to-deprive-us-of/'
+      ],
+    },
+    {
+      title: 'FL Group gives out peculiar loans to Russian billionaires',
+      description: `Alex Shnaider secured a €45.8 million loan to buy a yacht from Kaupthing Bank while a company belonging to another Russian billionaire got an even larger loan. In the source powerpoint, look for "p.136 (€79.5mm construction yacht loan to Russian vodka magnate Yuri Shefler’s Serena Equity Ltd.); p. 208 (€45.8 mm yacht construction loan to Canadian-Russian billionaire Alex Shnaider’s Filbert Pacific Ltd.)". Note: The report was produced on Sept. 25th 2008, the loans were presumably made before than.`,
+      date: '9/25/2008',
+      nodes: ['Alex Shnaider', 'Yuri Shefler'],
+      sources: [
+        'http://file.wikileaks.info/leak/kaupthing-bank-before-crash-2008.pdf',
+        'http://www.the-american-interest.com/2016/12/19/the-curious-world-of-donald-trumps-private-russian-connections/',
+        'https://twitter.com/itsjoekent/status/842224290485424129',
+      ],
+    }
   ],
 }
