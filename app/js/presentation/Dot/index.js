@@ -13,31 +13,32 @@ const Dot = ({ data, mapCategories }) => {
         <p>{ `${data._date.getMonth() + 1}/${data._date.getDate()}` }</p>
         <p>{ data._date.getFullYear() }</p>
       </div>
-      <div className="col-xs-10 dot__content">
+      <div className="col-xs-8 dot__content">
         <a href={`#${machineName}`}><h1 id={machineName}>{ data.title }</h1></a>
         <p>{ data.description }</p>
-      </div>
-      <div className="col-xs-offset-2 col-xs-10 dot__connections">
-        {data.nodes.map((node, index) =>
-          <div key={index} className="dot__connection">
-            <h2>{ node.title }</h2>
-            <p>{ node.description }</p>
-            { mapCategories(node.categories) }
-          </div>
-        )}
-      </div>
-      <div className="col-xs-offset-2 col-xs-10 dot__sources">
-        <Note text="sources" />
-        <ul>
-          {data.sources.map((source, index) =>
-            <li>
-              <a
-                key={index}
-                className="dot__source"
-                href={source} target="_blank">{source}</a>
-            </li>
+
+        <div className="col-xs-10 dot__connections">
+          {data.nodes.map((node, index) =>
+            <div key={index} className="dot__connection">
+              <h2>{ node.title }</h2>
+              <p>{ node.description }</p>
+              { mapCategories(node.categories) }
+            </div>
           )}
-        </ul>
+        </div>
+        <div className="col-xs-10 dot__sources">
+          <Note text="sources" />
+          <ul>
+            {data.sources.map((source, index) =>
+              <li>
+                <a
+                  key={index}
+                  className="dot__source"
+                  href={source} target="_blank">{source}</a>
+              </li>
+            )}
+          </ul>
+        </div>
       </div>
     </div>
   );

@@ -3,17 +3,9 @@ import { getMachineName } from '../../helpers';
 
 import './style.scss';
 
-const Label = ({ background, title, onClick, highlighted }) => {
-  const filter = () => {
-    if (!onClick) return;
-    onClick(getMachineName(title));
-  };
-
+const Label = ({ background, title }) => {
   return (
-    <span
-      className={`label ${highlighted ? '-highlighted' : ''}`}
-      style={{ background: background }}
-      onClick={filter}>
+    <span className='label' style={{ background: background }}>
       { title }
     </span>
   );
@@ -22,8 +14,6 @@ const Label = ({ background, title, onClick, highlighted }) => {
 Label.defaultProps = {
   background: '#DDDDDD',
   title: '',
-  onClick: () => {},
-  highlighted: false,
 };
 
 module.exports = Label;
