@@ -1,20 +1,36 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
 
-import 'whatwg-fetch';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+
+import createHistory from 'history/createBrowserHistory';
+import { Route } from 'react-router';
+
+import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux';
+
+import reducers from './js/reducers';
+
+const history = createHistory();
+const middleware = routerMiddleware(history);
+const store = createStore(
+  combineReducers({
+    ...reducers,
+    router: routerReducer
+  }),
+  applyMiddleware(middleware)
+);
 
 import './main.scss';
 
-import Page from './js/pages';
-import Home from './js/pages/Home';
-import ProjectContainer from './js/containers/ProjectContainer';
+import { page, home } from './js/components';
 
 render((
-  <Router history={browserHistory}>
-    <Route component={Page}>
-      <Route path="/" component={Home} />
-      <Route path="/projects/:project" component={ProjectContainer} />
-    </Route>
-  </Router>
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <Route component={page}>
+        <Route exact path="/" component={home}/>
+      </Route>
+    </ConnectedRouter>
+  </Provider>
 ), document.getElementById('root'));
