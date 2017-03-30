@@ -9,7 +9,13 @@ import { Route } from 'react-router';
 
 import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux';
 
-import reducers from './js/reducers';
+import reducers from './reducers';
+
+import './main.scss';
+
+import Header from './components/header';
+import Home from './components/home';
+import Project from './components/project';
 
 const history = createHistory();
 const middleware = routerMiddleware(history);
@@ -21,16 +27,16 @@ const store = createStore(
   applyMiddleware(middleware)
 );
 
-import './main.scss';
-
-import { page, home } from './js/components';
-
 render((
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Route component={page}>
-        <Route exact path="/" component={home}/>
-      </Route>
+      <div className="container-fluid">
+        <Header />
+        <main role="main">
+          <Route exact path="/" component={Home} />
+          <Route path="/projects/:id" component={Project} />
+        </main>
+      </div>
     </ConnectedRouter>
   </Provider>
 ), document.getElementById('root'));

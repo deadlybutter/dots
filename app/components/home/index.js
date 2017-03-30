@@ -1,13 +1,13 @@
 import React from 'react';
+import container from '../container';
 import './style.scss';
 
 const Home = (props) => {
-  console.log('home', props);
   return (
-    <article className="Home">
+    <article className="home">
       <h1>home</h1>
     </article>
   );
 };
 
-export default Home;
+export default container(Home);
