@@ -31,7 +31,6 @@ $pillHighlightShadow: inset 0.5px 0.5px 2px 1px $secondaryColor;
 
   &.-highlighted {
     color: $primaryColor;
-    border: $pillHighlightBorder;
     box-shadow: $pillHighlightShadow;
     stroke: $primaryColor;
     fill: $primaryColor;
