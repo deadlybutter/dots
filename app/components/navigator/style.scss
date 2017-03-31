@@ -13,6 +13,9 @@ $pillHighlightBorder: 1px inset $secondaryColor;
 $pillHighlightShadow: inset 0.5px 0.5px 2px 1px $secondaryColor;
 
 .pill {
+  color: $secondaryColor;
+  stroke: $secondaryColor;
+  fill: $secondaryColor;
   font-size: 1em;
   font-family: $secondaryFont;
   padding: $spacing / 2;
@@ -27,17 +30,28 @@ $pillHighlightShadow: inset 0.5px 0.5px 2px 1px $secondaryColor;
   }
 
   &.-highlighted {
+    color: $primaryColor;
     border: $pillHighlightBorder;
     box-shadow: $pillHighlightShadow;
+    stroke: $primaryColor;
+    fill: $primaryColor;
   }
 
-  img {
-    width: 64px;
-    height: 64px;
+  .pill__icon {
+    display: block;
+    margin: auto;
+    width: 3em;
+    height: 3em;
+
+    svg {
+      stroke-width: 0;
+      stroke: inherit;
+      fill: inherit;
+    }
   }
 
   p {
-    color: $secondaryColor;
+    color: inherit;
     padding-bottom: $spacing / 4;
   }
 }

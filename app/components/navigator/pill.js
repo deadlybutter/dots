@@ -4,7 +4,12 @@ import container from '../container';
 import { getProjectName, getProjectPill } from '../../helpers';
 import './style.scss';
 
-const Pill = ({ icon, pathOverride, router, title}) => {
+const Pill = ({
+  icon,
+  pathOverride,
+  router,
+  title,
+}) => {
   const projectName = getProjectName(router.location);
   const path = pathOverride === null ? title.toLowerCase() : pathOverride;
   const highlighted = path === getProjectPill(router.location);
@@ -13,7 +18,9 @@ const Pill = ({ icon, pathOverride, router, title}) => {
     <Link to={`/projects/${projectName}/${path}`}>
       <div className={`pill ${highlighted ? '-highlighted' : ''}`}>
         <p>{ title }</p>
-        <img src={ icon} />
+        <div className='pill__icon'>
+          { icon }
+        </div>
       </div>
     </Link>
   );
