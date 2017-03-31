@@ -1,0 +1,9 @@
+@import '../toolbox.scss';
+
+.block {
+  display: flex;
+
+  .block__component {
+    padding: $spacing / 2;
+  }
+}

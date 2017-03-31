@@ -12,7 +12,7 @@ const template = require('fs').readFileSync(templatePath, 'utf8');
 const render = require('./lib/render');
 render.init();
 
-app.get('/projects/:id', (req, res) => {
+app.get('/projects/:id*', (req, res) => {
   res.writeHead(200, {'Content-Type': 'text/html'});
   res.write(render.get(req.params.id));
   res.end();

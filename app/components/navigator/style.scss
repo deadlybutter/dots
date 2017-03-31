@@ -1,0 +1,43 @@
+@import '../toolbox.scss';
+
+.navigator {
+  display: flex;
+  justify-content: space-around;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+$pillHighlightBorder: 1px inset $secondaryColor;
+$pillHighlightShadow: inset 0.5px 0.5px 2px 1px $secondaryColor;
+
+.pill {
+  font-size: 1em;
+  font-family: $secondaryFont;
+  padding: $spacing / 2;
+  margin: $spacing / 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    cursor: pointer;
+    border: $pillHighlightBorder;
+  }
+
+  &.-highlighted {
+    border: $pillHighlightBorder;
+    box-shadow: $pillHighlightShadow;
+  }
+
+  img {
+    width: 64px;
+    height: 64px;
+  }
+
+  p {
+    color: $secondaryColor;
+    padding-bottom: $spacing / 4;
+  }
+}

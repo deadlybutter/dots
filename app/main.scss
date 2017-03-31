@@ -1,28 +1,16 @@
 @import './reset';
 
-@import './toolbox';
+@import './components/toolbox.scss';
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:700');
-// https://fonts.google.com/specimen/Roboto+Slab?selection.family=Open+Sans|Roboto+Slab:700
-// font-family: 'Open Sans', sans-serif;
-// font-family: 'Roboto Slab', serif;
 
 html {
   font-size: 14px;
-}
 
-@media (max-width: $small) {
-  font-size: 16px;
-}
+  @media (max-width: $small) {
+    font-size: 16px;
+  }
 
-@media (max-width: $medium) {
-  font-size: 18px;
-}
-
-.container-fluid {
-  max-width: 1000px;
-}
-
-main[role="main"] {
-  margin: $spacing 0;
+  @media (max-width: $medium) {
+    font-size: 18px;
+  }
 }

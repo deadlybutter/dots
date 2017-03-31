@@ -1,20 +1,20 @@
 import React from 'react';
-import container from '../container';
+import Block from '../block';
 import './style.scss';
 
 const Header = (props) => {
   return (
-    <header className="header row">
-      <div className="col-xs-12">
+    <Block flexStyle={{justifyContent: 'center'}}>
+      <header>
         <a href="/">
           <span>d</span>
           <span>o</span>
           <span>t</span>
           <span>s</span>
         </a>
-      </div>
-    </header>
+      </header>
+    </Block>
   );
 };
 
-export default container(Header);
+export default Header;

@@ -1,0 +1,25 @@
+/* Coolors Exported Palette - coolors.co/161418-7b777c-b9b7b9-989698-3c3a3e */
+/* source photo https://twitter.com/archillect/status/838532092111818756 */
+$color1: rgba(22, 20, 24, 1); /* EERIE BLACK */
+$color2: rgba(123, 119, 124, 1); /* SONIC SILVER */
+$color3: rgba(185, 183, 185, 1); /* GRAY (X11 GRAY) */
+$color4: rgba(152, 150, 152, 1); /* SPANISH GRAY */
+$color5: rgba(60, 58, 62, 1); /* BLACK OLIVE */
+
+$primaryColor: $color5;
+$secondaryColor: $color2;
+
+$white: #FFF;
+
+
+// https://fonts.google.com/specimen/Roboto+Slab?selection.family=Open+Sans|Roboto+Slab:700
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:700');
+$primaryFont: 'Roboto Slab', serif;
+$secondaryFont: 'Open Sans', sans-serif;
+
+
+$small: 425px;
+$medium: 768px;
+
+$spacing: 2em;
+$static-spacing: 16px;
