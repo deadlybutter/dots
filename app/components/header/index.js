@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Block from '../block';
 import './style.scss';
 
@@ -6,12 +7,12 @@ const Header = (props) => {
   return (
     <Block flexStyle={{justifyContent: 'center'}}>
       <header>
-        <a href="/">
+        <Link to="/">
           <span>d</span>
           <span>o</span>
           <span>t</span>
           <span>s</span>
-        </a>
+        </Link>
       </header>
     </Block>
   );
